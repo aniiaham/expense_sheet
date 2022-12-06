@@ -1,11 +1,12 @@
 import ExpenseItem from "./ExpenseItem";
-import "./DisplayExpenses.css";
+import Card from "./Card";
+import "./Expenses.css";
 
-function DisplayExpenses(props) {
+function Expenses(props) {
   const { expenses } = props;
 
   return (
-    <div>
+    <Card>
       {expenses.map((expense, index) => {
         return (
           <ExpenseItem
@@ -16,7 +17,7 @@ function DisplayExpenses(props) {
           />
         );
       })}
-    </div>
+    </Card>
   );
 }
-export default DisplayExpenses;
+export default Expenses;
